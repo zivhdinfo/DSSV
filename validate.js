@@ -23,4 +23,17 @@ function checkLength(value,min,max,noti){
         return false;
     }
 }
+function checkEmail (email){
+    re =
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    
+    var isValid = re.test(email);
+    if (isValid){
+        document.getElementById("spanEmailSV").innerText =""
+        return true;
+    }
+    document.getElementById("spanEmailSV").innerText ="Email Không Hợp Lệ"
+    return false;
+
+}
 

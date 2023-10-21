@@ -25,7 +25,7 @@ function addData(){
 
   // validate 
   var isValid; 
-  isValid =  checkID(sv.id,dssv) && checkLength(sv.pass,6,10,"spanMatKhau")
+  isValid =  checkID(sv.id,dssv) && checkLength(sv.pass,6,15,"spanMatKhau") && checkEmail (sv.email)
   if (isValid){
     dssv.push(sv);
     //  lưu vào localstore
